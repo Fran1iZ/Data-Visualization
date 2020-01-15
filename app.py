@@ -602,7 +602,6 @@ app.layout = html.Div([
     html.Div(
         [
             html.H1('Happiness in the World'),
-            html.H4('World overview'),
         ], id=('title'), style={"text-align": "center", "font-family": "Arial", "font-weight": "normal"}
     ),
     html.Div([
