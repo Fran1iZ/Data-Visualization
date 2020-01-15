@@ -503,7 +503,7 @@ trace_2019=go.Choropleth(locations=dfInfo2019['Country'], # Spatial coordinates
                          colorbar_title = "Happiness")
 ##################################################################### Plot Linha ######################################################################
 avg = [(pd.to_numeric(df_2015['Happiness Score']).mean()), (pd.to_numeric(df_2016['Happiness Score']).mean()), (pd.to_numeric(df_2017['Happiness Score']).mean()), (pd.to_numeric(df_2018['Happiness Score']).mean()),(pd.to_numeric(df_2019['Happiness Score']).mean())]
-layout=go.Layout(title='Happiness Score over the years')
+layout=go.Layout(title='Global Happiness Score over the years')
 fig2 = go.Figure(data=go.Scatter(x=["2015","2016","2017","2018","2019"], y=avg), layout=layout)
 fig2.update_xaxes(nticks=5)
 data = [trace_2015]
@@ -551,7 +551,7 @@ trace_TOP2015 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source=my_path+'Switzerland.jpg')
+                source="https://images-na.ssl-images-amazon.com/images/I/31sQ0fJmMmL._SY355_.jpg")
 
 trace_TOP2016 = go.layout.Image(
                 x=0,
@@ -563,7 +563,7 @@ trace_TOP2016 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source=my_path+'Denmark.gif')
+                source="https://cdn.landfallnavigation.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/f/nf032_.gif")
 
 trace_TOP2017 = go.layout.Image(
                 x=0,
@@ -575,7 +575,7 @@ trace_TOP2017 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source=my_path+'Norway.png')
+                source="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/2000px-Flag_of_Norway.svg.png")
 
 trace_TOP2018 = go.layout.Image(
                 x=0,
@@ -587,7 +587,7 @@ trace_TOP2018 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source=my_path+'Finland.png')
+                source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/1800px-Flag_of_Finland.svg.png")
 
 ######
 
