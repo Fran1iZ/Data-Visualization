@@ -36,6 +36,8 @@ my_path = os.getcwd() + '/world-happinessNew'
 
 app = dash.Dash()
 
+server = app.server
+
 df_2015=pd.read_csv(my_path+'/2015.csv')
 df_2016=pd.read_csv(my_path+'/2016.csv')
 df_2017=pd.read_csv(my_path+'/2017.csv')
