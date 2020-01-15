@@ -162,11 +162,6 @@ traceCorr2019 = go.Heatmap(
 dataCorr = [traceCorr2015]
 figCorr = go.Figure(data=dataCorr)
 
-
-##### INES/FRANCISCO
-
-####
-
 ##########
 
 def add_region(df):
@@ -406,7 +401,7 @@ figBar = go.Figure(data=data, layout=layout)
 
 
 
-##### CLAUDIA 1
+
 dfInfo2015 = pd.DataFrame(data =df_2015)
 for col in dfInfo2015.columns:
     dfInfo2015[col] = dfInfo2015[col].astype(str)
@@ -556,7 +551,7 @@ trace_TOP2015 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source="https://images-na.ssl-images-amazon.com/images/I/31sQ0fJmMmL._SY355_.jpg")
+                source=my_path+'Switzerland.jpg')
 
 trace_TOP2016 = go.layout.Image(
                 x=0,
@@ -568,7 +563,7 @@ trace_TOP2016 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source="https://cdn.landfallnavigation.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/f/nf032_.gif")
+                source=my_path+'Denmark.gif')
 
 trace_TOP2017 = go.layout.Image(
                 x=0,
@@ -580,7 +575,7 @@ trace_TOP2017 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/2000px-Flag_of_Norway.svg.png")
+                source=my_path+'Norway.png')
 
 trace_TOP2018 = go.layout.Image(
                 x=0,
@@ -592,7 +587,7 @@ trace_TOP2018 = go.layout.Image(
                 opacity=1.0,
                 layer="below",
                 sizing="stretch",
-                source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/1800px-Flag_of_Finland.svg.png")
+                source=my_path+'Finland.png')
 
 ######
 
@@ -696,8 +691,6 @@ def update(year):
     return fig,figScatter2,figCorr,figTOP.add_layout_image(traceTOP)
 
 
-
-##### CLAUDIA 2
 
 @app.callback(Output('fig_Ranking','figure'),[Input('slider','value')])
 def updateRank(year):
